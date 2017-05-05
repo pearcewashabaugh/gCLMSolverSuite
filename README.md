@@ -1,5 +1,5 @@
 # gCLMSolverSuite
-A collection of code for solving the generalized Constantin-Lax-Majda equation.
+A collection of code for solving the generalized Constantin-Lax-Majda equation. Please read the introduction to my dissertation at http://www.pearcewashabaugh.com for an introduction to these equations and their importance.
 
 Current usage:
 
