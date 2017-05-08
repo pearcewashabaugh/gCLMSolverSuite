@@ -6,9 +6,14 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 from matplotlib import style
 
+###############################################################################
+# Stuff to be set by user:
+
+Mtime = 64
+
+###############################################################################
 style.use('ggplot')
 
-Mtime = 128
 fig = plt.figure()
 ax1 = plt.axes(xlim = (-2,2), ylim = (-2,2))
 line, = ax1.plot([],[],lw = 1.5, color = "#3C4644")
@@ -43,10 +48,7 @@ def init():
 
 #animation function. This is called sequentially
 def animate(i):
-    """temp = (i - Mtime/2.0)/(Mtime/2.0)
-    if i>=Mtime/2:
-        ax1.set_xlim(-2 + temp*1.9, 2 - temp*1.9)
-        ax1.set_ylim(-2 + temp*1.9, 2 - temp*1.9)"""
+
     xs = []
     ys = []
     for radtheta in polar[int(i)]:
@@ -58,8 +60,8 @@ def animate(i):
 #call the animator. 
 #WARNING: Make sure that frames = Mtime
 ani = animation.FuncAnimation(fig, animate, init_func = init, 
-    frames = Mtime, interval = 80)
-ani.save('/home/pearce/Desktop/ermpin.gif', writer='imagemagick', fps = 30)
+    frames = Mtime, interval = 40)
+# ani.save('put_save_path_here', writer='imagemagick', fps = 30)
 plt.show()
 
 #Partially taken from:

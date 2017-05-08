@@ -25,15 +25,15 @@ starttime = time.time()
 
 #The number of positive fourier coefficients. There will then
 #be 2*Nfourier + 1 not necessarily zero fourier coefficients total
-Nfourier = 128
+Nfourier = 32
 #Initial time
 Tinit = 0.0 #make sure this is a float
 #Final time
 Tfin = .9 #make sure this is a float
 #Number of time steps
-Mtime = 128
+Mtime = 64
 #Number of spatial steps. Generally best to make a power of 2.
-Xspatial = 256
+Xspatial = 128
 #The number of zeros to pad with to prevent aliasing (e.g. 3/2 rule) and make 
 #fft output according to Xspatial resolution. 
 Kpad = int(float(Xspatial)/2) - Nfourier 
